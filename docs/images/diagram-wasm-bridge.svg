@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280">
+  <defs>
+    <linearGradient id="leftShore" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#FCD34D" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="rightShore" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FCA5A5" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#F87171"/>
+    </linearGradient>
+    <linearGradient id="planks" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="280" fill="#0F172A"/>
+  <!-- left shore: JavaScript -->
+  <path d="M 0,40 L 110,40 L 110,240 L 0,240 Z" fill="url(#leftShore)" opacity="0.25"/>
+  <text x="55" y="160" text-anchor="middle" fill="#FCD34D" font-family="ui-monospace,monospace" font-size="22" font-weight="bold">JS</text>
+  <text x="55" y="185" text-anchor="middle" fill="#FDE68A" font-family="ui-sans-serif,system-ui" font-size="12">JavaScript</text>
+  <text x="55" y="205" text-anchor="middle" fill="#FDE68A" font-family="ui-sans-serif,system-ui" font-size="10">(your code)</text>
+  <!-- right shore: Rust -->
+  <path d="M 530,40 L 640,40 L 640,240 L 530,240 Z" fill="url(#rightShore)" opacity="0.25"/>
+  <text x="585" y="160" text-anchor="middle" fill="#F87171" font-family="ui-monospace,monospace" font-size="22" font-weight="bold">Rust</text>
+  <text x="585" y="185" text-anchor="middle" fill="#FCA5A5" font-family="ui-sans-serif,system-ui" font-size="12">Rust</text>
+  <text x="585" y="205" text-anchor="middle" fill="#FCA5A5" font-family="ui-sans-serif,system-ui" font-size="10">(the 5 opcodes)</text>
+  <!-- the bridge: WASM planks -->
+  <g>
+    <rect x="115" y="60" width="410" height="14" fill="url(#planks)" opacity="0.85" rx="2"/>
+    <rect x="115" y="84" width="410" height="14" fill="url(#planks)" opacity="0.85" rx="2"/>
+    <rect x="115" y="108" width="410" height="14" fill="url(#planks)" opacity="0.85" rx="2"/>
+    <rect x="115" y="132" width="410" height="14" fill="url(#planks)" opacity="0.85" rx="2"/>
+    <rect x="115" y="156" width="410" height="14" fill="url(#planks)" opacity="0.85" rx="2"/>
+  </g>
+  <text x="320" y="195" text-anchor="middle" fill="#C4B5FD" font-family="ui-monospace,monospace" font-size="20" font-weight="bold">WASM</text>
+  <text x="320" y="218" text-anchor="middle" fill="#DDD6FE" font-family="ui-sans-serif,system-ui" font-size="12">WebAssembly</text>
+  <text x="320" y="240" text-anchor="middle" fill="#DDD6FE" font-family="ui-sans-serif,system-ui" font-size="10">the universal bridge</text>
+  <!-- 5 opcodes floating on the bridge -->
+  <g font-family="ui-monospace,monospace" font-size="10" fill="#FFF">
+    <rect x="140" y="80" width="44" height="20" fill="#312E81" rx="3"/>
+    <text x="162" y="94" text-anchor="middle">BIND</text>
+    <rect x="220" y="80" width="44" height="20" fill="#312E81" rx="3"/>
+    <text x="242" y="94" text-anchor="middle">LINK</text>
+    <rect x="300" y="80" width="56" height="20" fill="#312E81" rx="3"/>
+    <text x="328" y="94" text-anchor="middle">EFFECT</text>
+    <rect x="380" y="80" width="44" height="20" fill="#312E81" rx="3"/>
+    <text x="402" y="94" text-anchor="middle">VIEW</text>
+    <rect x="448" y="80" width="44" height="20" fill="#312E81" rx="3"/>
+    <text x="470" y="94" text-anchor="middle">TICK</text>
+  </g>
+  <text x="320" y="20" text-anchor="middle" fill="#E2E8F0" font-family="ui-sans-serif,system-ui" font-size="14" font-weight="600">WASM is the bridge between any language and any browser</text>
+  <text x="320" y="36" text-anchor="middle" fill="#94A3B8" font-family="ui-sans-serif,system-ui" font-size="11">The 5 opcodes cross the bridge in either direction</text>
+</svg>

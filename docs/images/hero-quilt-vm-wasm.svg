@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320">
+  <defs>
+    <radialGradient id="fire" cx="50%" cy="60%" r="35%">
+      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#FF9A3C" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#1A0E2E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spreadsheet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+    <linearGradient id="ttrpg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </linearGradient>
+    <linearGradient id="notion" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+    <linearGradient id="agent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#581C87"/>
+    </linearGradient>
+    <linearGradient id="neural" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#164E63"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="320" fill="#0A0A14"/>
+  <!-- night sky stars -->
+  <g fill="#FFF" opacity="0.6">
+    <circle cx="40" cy="30" r="0.8"/>
+    <circle cx="120" cy="50" r="1.1"/>
+    <circle cx="280" cy="20" r="0.6"/>
+    <circle cx="450" cy="40" r="1.0"/>
+    <circle cx="580" cy="25" r="0.7"/>
+    <circle cx="610" cy="80" r="1.2"/>
+    <circle cx="20" cy="160" r="0.5"/>
+    <circle cx="80" cy="280" r="0.9"/>
+    <circle cx="600" cy="260" r="0.8"/>
+  </g>
+  <!-- 5 tendrils of light, each going from the campfire to a polyformalism -->
+  <g filter="url(#glow)" opacity="0.85">
+    <!-- to spreadsheet (top-left) -->
+    <path d="M 320,200 Q 220,140 80,80" stroke="url(#spreadsheet)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- to TTRPG (top-right) -->
+    <path d="M 320,200 Q 420,140 560,80" stroke="url(#ttrpg)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- to Notion/document (bottom-left) -->
+    <path d="M 320,200 Q 220,260 60,260" stroke="url(#notion)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- to chat agent (bottom-right) -->
+    <path d="M 320,200 Q 420,260 580,260" stroke="url(#agent)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- to neural net (top center) -->
+    <path d="M 320,200 L 320,40" stroke="url(#neural)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- the campfire at center -->
+  <circle cx="320" cy="200" r="80" fill="url(#fire)"/>
+  <g filter="url(#glow)">
+    <circle cx="320" cy="200" r="6" fill="#FFE5A0"/>
+    <circle cx="316" cy="196" r="3" fill="#FF9A3C"/>
+    <circle cx="324" cy="204" r="2.5" fill="#FF6B1A"/>
+  </g>
+  <!-- 5 endpoints, each labeled with the polyformalism -->
+  <g>
+    <!-- spreadsheet -->
+    <rect x="20" y="55" width="120" height="50" rx="6" fill="url(#spreadsheet)" opacity="0.9"/>
+    <text x="80" y="78" text-anchor="middle" fill="#FFF" font-family="ui-sans-serif,system-ui" font-size="11" font-weight="bold">SPREADSHEET</text>
+    <text x="80" y="94" text-anchor="middle" fill="#E0E7FF" font-family="ui-monospace,monospace" font-size="9">=A1+B1</text>
+    <!-- TTRPG -->
+    <rect x="500" y="55" width="120" height="50" rx="6" fill="url(#ttrpg)" opacity="0.9"/>
+    <text x="560" y="78" text-anchor="middle" fill="#FFF" font-family="ui-sans-serif,system-ui" font-size="11" font-weight="bold">TTRPG</text>
+    <text x="560" y="94" text-anchor="middle" fill="#FEE2E2" font-family="ui-monospace,monospace" font-size="9">orc.hp -= 3</text>
+    <!-- Notion -->
+    <rect x="0" y="235" width="120" height="50" rx="6" fill="url(#notion)" opacity="0.9"/>
+    <text x="60" y="258" text-anchor="middle" fill="#FFF" font-family="ui-sans-serif,system-ui" font-size="11" font-weight="bold">DOCUMENT</text>
+    <text x="60" y="274" text-anchor="middle" fill="#D1FAE5" font-family="ui-monospace,monospace" font-size="9">linked cells</text>
+    <!-- agent -->
+    <rect x="500" y="235" width="120" height="50" rx="6" fill="url(#agent)" opacity="0.9"/>
+    <text x="560" y="258" text-anchor="middle" fill="#FFF" font-family="ui-sans-serif,system-ui" font-size="11" font-weight="bold">AGENT</text>
+    <text x="560" y="274" text-anchor="middle" fill="#F3E8FF" font-family="ui-monospace,monospace" font-size="9">memory += reply</text>
+    <!-- neural net -->
+    <rect x="270" y="5" width="100" height="40" rx="6" fill="url(#neural)" opacity="0.9"/>
+    <text x="320" y="22" text-anchor="middle" fill="#FFF" font-family="ui-sans-serif,system-ui" font-size="11" font-weight="bold">NEURAL NET</text>
+    <text x="320" y="36" text-anchor="middle" fill="#CFFAFE" font-family="ui-monospace,monospace" font-size="9">w[i,j] -= lr*g</text>
+  </g>
+  <!-- the 5 opcodes in the fire -->
+  <g font-family="ui-monospace,monospace" font-size="10" fill="#0A0A14" font-weight="bold">
+    <text x="320" y="190" text-anchor="middle">BIND</text>
+    <text x="320" y="204" text-anchor="middle">LINK</text>
+    <text x="320" y="218" text-anchor="middle">EFFECT</text>
+    <text x="320" y="232" text-anchor="middle">VIEW</text>
+    <text x="320" y="246" text-anchor="middle">TICK</text>
+  </g>
+  <!-- title -->
+  <text x="320" y="305" text-anchor="middle" fill="#FFE5A0" font-family="ui-sans-serif,system-ui" font-size="14" font-weight="600" letter-spacing="0.05em">ONE FIRE · FIVE Opcodes · ANY BROWSER</text>
+</svg>
