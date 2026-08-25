@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quilt VM in the Browser</title>
+<style>
+body { font-family: monospace; padding: 2em; background: #111; color: #eee; }
+h1 { color: #6cf; }
+pre { background: #222; padding: 1em; border-radius: 4px; }
+button { background: #6cf; color: #000; padding: 0.5em 1em; border: none; border-radius: 4px; cursor: pointer; font-family: monospace; }
+button:hover { background: #4af; }
+</style>
+</head>
+<body>
+<h1>The Quilt VM in the Browser</h1>
+<p>Layer 1 of the polyformalism: the 5 opcodes (BIND, LINK, EFFECT, VIEW, TICK) compiled to WASM.</p>
+<p>Same substrate, different metal. <a href="https://github.com/SuperInstance/quilt-vm-wasm">Source on GitHub</a>.</p>
+<button id="run">Run Gold Demo</button>
+<pre id="output">Click "Run Gold Demo" to start.</pre>
+
+<script type="module">
+import init, { WasmQuiltVM } from './quilt_vm_wasm.js';
+
+await init();
+window.WasmQuiltVM = WasmQuiltVM;
+
+document.getElementById('run').addEventListener('click', () => {
+    const vm = new WasmQuiltVM();
+    // 1. Quilt cell
+    vm.bind("bathy:0", 4.2);
+    vm.link("bathy:0", "tide:current", "depends_on");
+    // 2. Cordis plugin
+    vm.bind("logger:0", "hello");
+    vm.bind("config:main", "json");
+    vm.link("logger:0", "config:main", "coeffect:config");
+    // 3. Spreadsheet
+    vm.bind("A1", 10);
+    vm.bind("A2", 20);
+    vm.bind("B1", 0);
+    vm.link("B1", "A1", "depends_on");
+    vm.link("B1", "A2", "depends_on");
+    // 4. MUD
+    vm.bind("room:1", "Forbidden Chamber");
+    // 5. TTRPG
+    vm.bind("player:gandalf", { perception: 15 });
+    // 6. Boat
+    vm.bind("boat:0", "north");
+    vm.link("boat:0", "bay", "in");
+    // 7. Cowboy's model
+    vm.bind("model:PHI-4", 0.6);
+    // 8. Bus
+    vm.bind("tick", 0);
+    vm.bind("subscriber", 0);
+    vm.link("subscriber", "tick", "observed");
+    // Effects
+    vm.effect("counter", "inc", "dec");
+    // Views
+    vm.view("bathy:0", "anyone");
+    vm.view("logger:0", "anyone");
+    vm.view("B1", "anyone");
+    vm.view("boat:0", "anyone");
+    // Tick
+    vm.tick(1.0);
+    // Show the stats
+    const stats = vm.stats();
+    const reachable = vm.reachable("B1", "depends_on");
+    const out = JSON.stringify({
+        stats,
+        reachable_from_B1: reachable,
+        view_bathy: vm.view("bathy:0", "anyone"),
+    }, null, 2);
+    document.getElementById('output').textContent = out;
+});
+</script>
+</body>
+</html>
