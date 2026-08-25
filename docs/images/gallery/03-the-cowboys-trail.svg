@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320">
+  <defs>
+    <linearGradient id="trail3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C2D12" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="fire3" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#F59E0B" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#7C2D12" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="320" fill="#0F172A"/>
+
+  <!-- horizon line and dim ground -->
+  <rect x="0" y="0" width="640" height="170" fill="#0F172A"/>
+  <rect x="0" y="170" width="640" height="150" fill="#1A1408"/>
+  <line x1="0" y1="170" x2="640" y2="170" stroke="#3F2A14" stroke-width="0.5"/>
+
+  <!-- distant mountains -->
+  <g fill="#1E293B" opacity="0.7">
+    <polygon points="0,170 80,110 160,170"/>
+    <polygon points="120,170 220,90 320,170"/>
+    <polygon points="280,170 380,100 480,170"/>
+    <polygon points="440,170 540,120 640,170"/>
+  </g>
+
+  <!-- title -->
+  <text x="20" y="28" fill="#E2E8F0" font-family="ui-sans-serif,system-ui" font-size="18" font-weight="700">The Cowboy's Trail</text>
+  <text x="20" y="46" fill="#94A3B8" font-family="ui-sans-serif,system-ui" font-size="11">From campfire to language to grammar, the rider runs the whole range</text>
+
+  <!-- stars -->
+  <g fill="#FFF" opacity="0.5">
+    <circle cx="60" cy="60" r="0.8"/>
+    <circle cx="180" cy="40" r="0.6"/>
+    <circle cx="350" cy="50" r="1.0"/>
+    <circle cx="500" cy="35" r="0.7"/>
+    <circle cx="600" cy="70" r="0.9"/>
+  </g>
+
+  <!-- trail — winding from left to right -->
+  <path d="M 30 250 Q 100 240 130 220 Q 170 200 200 210 Q 240 220 280 200 Q 330 180 370 200 Q 420 220 460 200 Q 510 180 560 210 Q 600 230 615 240"
+        fill="none" stroke="url(#trail3)" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 30 250 Q 100 240 130 220 Q 170 200 200 210 Q 240 220 280 200 Q 330 180 370 200 Q 420 220 460 200 Q 510 180 560 210 Q 600 230 615 240"
+        fill="none" stroke="#FCD34D" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+
+  <!-- 6 stations along the trail -->
+  <!-- 1. campfire (start) at (30, 250) -->
+  <g transform="translate(30,250)">
+    <circle cx="0" cy="0" r="14" fill="url(#fire3)"/>
+    <g stroke="#7C2D12" stroke-width="2" stroke-linecap="round">
+      <line x1="-8" y1="2" x2="8" y2="-2" stroke="#92400E" stroke-width="3"/>
+      <line x1="-6" y1="-2" x2="6" y2="2" stroke="#92400E" stroke-width="3"/>
+    </g>
+    <text x="0" y="32" text-anchor="middle" fill="#FCD34D" font-family="ui-sans-serif,system-ui" font-size="9" font-weight="700">campfire</text>
+  </g>
+
+  <!-- 2. library (book stack) at (130, 220) -->
+  <g transform="translate(130,220)">
+    <rect x="-12" y="-2" width="24" height="6" fill="#3B82F6"/>
+    <rect x="-10" y="-7" width="20" height="5" fill="#60A5FA"/>
+    <rect x="-8" y="-12" width="16" height="5" fill="#93C5FD"/>
+    <text x="0" y="22" text-anchor="middle" fill="#BFDBFE" font-family="ui-sans-serif,system-ui" font-size="9" font-weight="700">library</text>
+  </g>
+
+  <!-- 3. optimizer mountain at (260, 205) -->
+  <g transform="translate(260,205)">
+    <polygon points="-14,8 0,-14 14,8" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <polygon points="-4,-2 0,-14 4,-2" fill="#F59E0B" opacity="0.7"/>
+    <text x="0" y="26" text-anchor="middle" fill="#FDE68A" font-family="ui-sans-serif,system-ui" font-size="9" font-weight="700">optimizer mtn</text>
+  </g>
+
+  <!-- 4. GC ranch at (380, 195) -->
+  <g transform="translate(380,195)">
+    <rect x="-12" y="-4" width="24" height="10" fill="#7F1D1D" stroke="#DC2626" stroke-width="1"/>
+    <polygon points="-14,-4 -10,-12 -6,-4" fill="#DC2626" stroke="#FCA5A5" stroke-width="1"/>
+    <polygon points="-2,-4 2,-12 6,-4" fill="#DC2626" stroke="#FCA5A5" stroke-width="1"/>
+    <polygon points="6,-4 10,-12 14,-4" fill="#DC2626" stroke="#FCA5A5" stroke-width="1"/>
+    <text x="0" y="22" text-anchor="middle" fill="#FCA5A5" font-family="ui-sans-serif,system-ui" font-size="9" font-weight="700">GC ranch</text>
+  </g>
+
+  <!-- 5. language camp at (490, 200) -->
+  <g transform="translate(490,200)">
+    <polygon points="-14,8 0,-12 14,8" fill="#0E7490" stroke="#06B6D4" stroke-width="1.5"/>
+    <line x1="0" y1="-12" x2="0" y2="-18" stroke="#06B6D4" stroke-width="1.5"/>
+    <polygon points="-3,-18 0,-15 3,-18" fill="#F59E0B"/>
+    <text x="0" y="26" text-anchor="middle" fill="#A5F3FC" font-family="ui-sans-serif,system-ui" font-size="9" font-weight="700">language camp</text>
+  </g>
+
+  <!-- 6. human tower at (615, 240) -->
+  <g transform="translate(615,240)">
+    <rect x="-10" y="-4" width="20" height="14" fill="#831843" stroke="#EC4899" stroke-width="1.5"/>
+    <rect x="-7" y="-12" width="14" height="8" fill="#9D174D" stroke="#EC4899" stroke-width="1.5"/>
+    <rect x="-4" y="-18" width="8" height="6" fill="#BE185D" stroke="#EC4899" stroke-width="1.5"/>
+    <circle cx="0" cy="-22" r="2" fill="#F9A8D4"/>
+    <text x="0" y="26" text-anchor="middle" fill="#F9A8D4" font-family="ui-sans-serif,system-ui" font-size="9" font-weight="700">grammar tower</text>
+  </g>
+
+  <!-- Cowboy on horse at the start (left), riding right -->
+  <g transform="translate(60,238)" filter="url(#glow3)">
+    <!-- horse body -->
+    <ellipse cx="0" cy="0" rx="12" ry="5" fill="#92400E"/>
+    <line x1="-10" y1="3" x2="-10" y2="10" stroke="#92400E" stroke-width="2"/>
+    <line x1="-4" y1="3" x2="-4" y2="10" stroke="#92400E" stroke-width="2"/>
+    <line x1="4" y1="3" x2="4" y2="10" stroke="#92400E" stroke-width="2"/>
+    <line x1="10" y1="3" x2="10" y2="10" stroke="#92400E" stroke-width="2"/>
+    <!-- horse head -->
+    <path d="M 10 -2 L 16 -6 L 18 -2 L 14 0 Z" fill="#92400E"/>
+    <!-- cowboy body -->
+    <line x1="0" y1="-3" x2="0" y2="-10" stroke="#7C2D12" stroke-width="2.5"/>
+    <!-- cowboy head + hat -->
+    <circle cx="0" cy="-12" r="3" fill="#FCD34D"/>
+    <path d="M -5 -14 L 5 -14 L 3 -17 L -3 -17 Z" fill="#7C2D12"/>
+    <ellipse cx="0" cy="-17" rx="5" ry="1.2" fill="#7C2D12"/>
+  </g>
+
+  <!-- Cowboy on horse at the end (right), also riding right (toward horizon) -->
+  <g transform="translate(575,212)" filter="url(#glow3)">
+    <ellipse cx="0" cy="0" rx="9" ry="4" fill="#7C2D12"/>
+    <line x1="-7" y1="2" x2="-7" y2="8" stroke="#7C2D12" stroke-width="1.5"/>
+    <line x1="-2" y1="2" x2="-2" y2="8" stroke="#7C2D12" stroke-width="1.5"/>
+    <line x1="3" y1="2" x2="3" y2="8" stroke="#7C2D12" stroke-width="1.5"/>
+    <line x1="7" y1="2" x2="7" y2="8" stroke="#7C2D12" stroke-width="1.5"/>
+    <path d="M 7 -1 L 12 -4 L 14 -1 L 10 1 Z" fill="#7C2D12"/>
+    <line x1="0" y1="-3" x2="0" y2="-8" stroke="#7C2D12" stroke-width="2"/>
+    <circle cx="0" cy="-10" r="2.5" fill="#FCD34D"/>
+    <path d="M -4 -12 L 4 -12 L 2.5 -14.5 L -2.5 -14.5 Z" fill="#7C2D12"/>
+    <ellipse cx="0" cy="-14.5" rx="4" ry="1" fill="#7C2D12"/>
+  </g>
+
+  <!-- ground line / dust -->
+  <g stroke="#7C2D12" stroke-width="0.5" fill="none" opacity="0.4">
+    <path d="M 50 260 Q 100 258 150 262"/>
+    <path d="M 200 252 Q 250 250 300 254"/>
+    <path d="M 350 244 Q 400 242 450 246"/>
+  </g>
+</svg>

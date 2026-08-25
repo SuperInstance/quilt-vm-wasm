@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320">
+  <defs>
+    <linearGradient id="cliff2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="river2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="softglow2">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="320" fill="#0F172A"/>
+
+  <!-- title -->
+  <text x="20" y="28" fill="#E2E8F0" font-family="ui-sans-serif,system-ui" font-size="18" font-weight="700">The Polyformalism Canyon</text>
+  <text x="20" y="46" fill="#94A3B8" font-family="ui-sans-serif,system-ui" font-size="11">Seven cliffs, one river, one rider on every ledge</text>
+
+  <!-- 7 cliffs (vertical bands), each 80px wide with 4px gap, starting at x=20 -->
+  <!-- cliff 1: bytecode (deepest) -->
+  <g>
+    <rect x="20" y="60" width="80" height="200" fill="url(#cliff2)" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="60" y="180" text-anchor="middle" fill="#BFDBFE" font-family="ui-sans-serif,system-ui" font-size="10" font-weight="700">bytecode</text>
+    <text x="60" y="195" text-anchor="middle" fill="#64748B" font-family="ui-monospace,monospace" font-size="8">0x4F 0x12 ...</text>
+    <!-- person -->
+    <g transform="translate(60,140)" filter="url(#softglow2)">
+      <circle cx="0" cy="-6" r="3" fill="#3B82F6"/>
+      <line x1="0" y1="-3" x2="0" y2="3" stroke="#3B82F6" stroke-width="2"/>
+      <line x1="0" y1="3" x2="-3" y2="8" stroke="#3B82F6" stroke-width="1.5"/>
+      <line x1="0" y1="3" x2="3" y2="8" stroke="#3B82F6" stroke-width="1.5"/>
+    </g>
+    <text x="60" y="80" text-anchor="middle" fill="#3B82F6" font-family="ui-sans-serif,system-ui" font-size="9">Python dev</text>
+  </g>
+
+  <!-- cliff 2: types -->
+  <g>
+    <rect x="104" y="60" width="80" height="200" fill="url(#cliff2)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="144" y="180" text-anchor="middle" fill="#A7F3D0" font-family="ui-sans-serif,system-ui" font-size="10" font-weight="700">types</text>
+    <text x="144" y="195" text-anchor="middle" fill="#64748B" font-family="ui-monospace,monospace" font-size="8">A → B</text>
+    <g transform="translate(144,140)" filter="url(#softglow2)">
+      <circle cx="0" cy="-6" r="3" fill="#10B981"/>
+      <line x1="0" y1="-3" x2="0" y2="3" stroke="#10B981" stroke-width="2"/>
+      <line x1="0" y1="3" x2="-3" y2="8" stroke="#10B981" stroke-width="1.5"/>
+      <line x1="0" y1="3" x2="3" y2="8" stroke="#10B981" stroke-width="1.5"/>
+    </g>
+    <text x="144" y="80" text-anchor="middle" fill="#10B981" font-family="ui-sans-serif,system-ui" font-size="9">Rust dev</text>
+  </g>
+
+  <!-- cliff 3: linker -->
+  <g>
+    <rect x="188" y="60" width="80" height="200" fill="url(#cliff2)" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="228" y="180" text-anchor="middle" fill="#E9D5FF" font-family="ui-sans-serif,system-ui" font-size="10" font-weight="700">linker</text>
+    <text x="228" y="195" text-anchor="middle" fill="#64748B" font-family="ui-monospace,monospace" font-size="8">a.so → b.so</text>
+    <g transform="translate(228,140)" filter="url(#softglow2)">
+      <circle cx="0" cy="-6" r="3" fill="#A855F7"/>
+      <line x1="0" y1="-3" x2="0" y2="3" stroke="#A855F7" stroke-width="2"/>
+      <line x1="0" y1="3" x2="-3" y2="8" stroke="#A855F7" stroke-width="1.5"/>
+      <line x1="0" y1="3" x2="3" y2="8" stroke="#A855F7" stroke-width="1.5"/>
+    </g>
+    <text x="228" y="80" text-anchor="middle" fill="#A855F7" font-family="ui-sans-serif,system-ui" font-size="9">C dev</text>
+  </g>
+
+  <!-- cliff 4: optimizer -->
+  <g>
+    <rect x="272" y="60" width="80" height="200" fill="url(#cliff2)" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="312" y="180" text-anchor="middle" fill="#FDE68A" font-family="ui-sans-serif,system-ui" font-size="10" font-weight="700">optimizer</text>
+    <text x="312" y="195" text-anchor="middle" fill="#64748B" font-family="ui-monospace,monospace" font-size="8">fuse(·)</text>
+    <g transform="translate(312,140)" filter="url(#softglow2)">
+      <circle cx="0" cy="-6" r="3" fill="#F59E0B"/>
+      <line x1="0" y1="-3" x2="0" y2="3" stroke="#F59E0B" stroke-width="2"/>
+      <line x1="0" y1="3" x2="-3" y2="8" stroke="#F59E0B" stroke-width="1.5"/>
+      <line x1="0" y1="3" x2="3" y2="8" stroke="#F59E0B" stroke-width="1.5"/>
+    </g>
+    <text x="312" y="80" text-anchor="middle" fill="#F59E0B" font-family="ui-sans-serif,system-ui" font-size="9">Haskell dev</text>
+  </g>
+
+  <!-- cliff 5: GC -->
+  <g>
+    <rect x="356" y="60" width="80" height="200" fill="url(#cliff2)" stroke="#DC2626" stroke-width="1.5"/>
+    <text x="396" y="180" text-anchor="middle" fill="#FCA5A5" font-family="ui-sans-serif,system-ui" font-size="10" font-weight="700">GC</text>
+    <text x="396" y="195" text-anchor="middle" fill="#64748B" font-family="ui-monospace,monospace" font-size="8">mark·sweep</text>
+    <g transform="translate(396,140)" filter="url(#softglow2)">
+      <circle cx="0" cy="-6" r="3" fill="#DC2626"/>
+      <line x1="0" y1="-3" x2="0" y2="3" stroke="#DC2626" stroke-width="2"/>
+      <line x1="0" y1="3" x2="-3" y2="8" stroke="#DC2626" stroke-width="1.5"/>
+      <line x1="0" y1="3" x2="3" y2="8" stroke="#DC2626" stroke-width="1.5"/>
+    </g>
+    <text x="396" y="80" text-anchor="middle" fill="#DC2626" font-family="ui-sans-serif,system-ui" font-size="9">JS dev</text>
+  </g>
+
+  <!-- cliff 6: syntax -->
+  <g>
+    <rect x="440" y="60" width="80" height="200" fill="url(#cliff2)" stroke="#06B6D4" stroke-width="1.5"/>
+    <text x="480" y="180" text-anchor="middle" fill="#A5F3FC" font-family="ui-sans-serif,system-ui" font-size="10" font-weight="700">syntax</text>
+    <text x="480" y="195" text-anchor="middle" fill="#64748B" font-family="ui-monospace,monospace" font-size="8">let x = ...</text>
+    <g transform="translate(480,140)" filter="url(#softglow2)">
+      <circle cx="0" cy="-6" r="3" fill="#06B6D4"/>
+      <line x1="0" y1="-3" x2="0" y2="3" stroke="#06B6D4" stroke-width="2"/>
+      <line x1="0" y1="3" x2="-3" y2="8" stroke="#06B6D4" stroke-width="1.5"/>
+      <line x1="0" y1="3" x2="3" y2="8" stroke="#06B6D4" stroke-width="1.5"/>
+    </g>
+    <text x="480" y="80" text-anchor="middle" fill="#06B6D4" font-family="ui-sans-serif,system-ui" font-size="9">TS dev</text>
+  </g>
+
+  <!-- cliff 7: grammar -->
+  <g>
+    <rect x="524" y="60" width="96" height="200" fill="url(#cliff2)" stroke="#EC4899" stroke-width="1.5"/>
+    <text x="572" y="180" text-anchor="middle" fill="#F9A8D4" font-family="ui-sans-serif,system-ui" font-size="10" font-weight="700">grammar</text>
+    <text x="572" y="195" text-anchor="middle" fill="#64748B" font-family="ui-monospace,monospace" font-size="8">"Bind..."</text>
+    <g transform="translate(572,140)" filter="url(#softglow2)">
+      <circle cx="0" cy="-6" r="3" fill="#EC4899"/>
+      <line x1="0" y1="-3" x2="0" y2="3" stroke="#EC4899" stroke-width="2"/>
+      <line x1="0" y1="3" x2="-3" y2="8" stroke="#EC4899" stroke-width="1.5"/>
+      <line x1="0" y1="3" x2="3" y2="8" stroke="#EC4899" stroke-width="1.5"/>
+    </g>
+    <text x="572" y="80" text-anchor="middle" fill="#EC4899" font-family="ui-sans-serif,system-ui" font-size="9">poet</text>
+  </g>
+
+  <!-- river at the bottom — the substrate -->
+  <rect x="0" y="270" width="640" height="40" fill="url(#river2)"/>
+  <g stroke="#0EA5E9" stroke-width="0.6" fill="none" opacity="0.5">
+    <path d="M 0 285 Q 80 280 160 285 T 320 285 T 480 285 T 640 285"/>
+    <path d="M 0 295 Q 80 290 160 295 T 320 295 T 480 295 T 640 295"/>
+  </g>
+  <text x="320" y="305" text-anchor="middle" fill="#BAE6FD" font-family="ui-sans-serif,system-ui" font-size="12" font-weight="600" font-style="italic">~ the substrate — a cell-graph of named things and typed relations ~</text>
+</svg>
