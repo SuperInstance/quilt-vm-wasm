@@ -428,9 +428,10 @@ The cowboy rides.
 - **The Gold** — Paper 137, the 1-page, 10-page, 100-page
   synthesis: https://github.com/SuperInstance/AI-Writings
 - **The 5 opcodes at every layer** — Paper 142, the
-  7-layer polyformalism
-- **The cowboy's library** — Papers 1-147, Fables 1-75,
-  Stories 1-33 in 15+ traditions
+  7-layer polyformalism; Papers 143–150, the per-layer
+  deep dives; Paper 148, the WASM-as-bytecode chapter
+- **The cowboy's library** — Papers 1-147, Fables 1-77,
+  Stories 1-34 in 15+ traditions
 - **The agent knowledge base** — 50+ documents on
   the agent/agent architecture:
   https://github.com/SuperInstance/agent-knowledge
@@ -438,6 +439,37 @@ The cowboy rides.
   task: https://github.com/SuperInstance/casting-call
 - **The substrate** — the original 405-test Python
   substrate: https://github.com/SuperInstance/quilt-substrate
+
+---
+
+## Related Work
+
+The cowboy doesn't ride alone. The campfire is one light
+in a wider night sky; the 5 opcodes are one voice in a
+wider chorus. These are the other fires the cowboy tends
+on the same range.
+
+### Documentation canon
+
+- **[agent-knowledge](https://github.com/SuperInstance/agent-knowledge)** — the canonical "ah-ha" doc pattern: HOOK → REVEAL → CONNECT → ACTIVATE, the way the substrate's voice reaches new ears.
+- **[AI-Writings](https://github.com/SuperInstance/AI-Writings)** — the full canon: 77 fables, 38 papers, 34 stories, the library this README is one footnote in.
+
+### The agent fleet
+
+- **[casting-call](https://github.com/SuperInstance/casting-call)** — the LLM model atlas: which model plays which role when the campfire needs a voice.
+- **[ai-forest](https://github.com/SuperInstance/ai-forest)** — the 5-layer agent ecology: Canopy, Understory, Forest Floor, Mycelium, Seed Bank — the ranch the cowboy rides through.
+- **[capability-spec-rs](https://github.com/SuperInstance/capability-spec-rs)** — agent capability specifications with dependency graphs, the manifest of who can do what.
+- **[babel-vessel](https://github.com/SuperInstance/babel-vessel)** — the multi-language vessel that translates between linguistic boundaries, the polyglot the cowboy trusts.
+- **[actor-rs](https://github.com/SuperInstance/actor-rs)** — the actor model for distributed agents, the mail route between camps.
+
+### The substrate as a primitive
+
+- **[cache-layer](https://github.com/SuperInstance/cache-layer)** — uses BIND / EFFECT / VIEW literally as cache primitives, the substrate serving coffee.
+- **[c-ternary](https://github.com/SuperInstance/c-ternary)** — C99 ternary logic with conviction mapping, the substrate learning to say "maybe".
+- **[abstraction-planes](https://github.com/SuperInstance/abstraction-planes)** — the 6-plane stack from Intent to Metal, the view from the highest cliff down to the ore.
+
+The cowboy rides between these fires. The fires are the
+same fire. The cowboy is the rider.
 
 ---
 
