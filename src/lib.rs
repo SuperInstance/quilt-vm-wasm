@@ -231,6 +231,14 @@ mod wasm_bindings {
             self.0.tick(dt);
         }
 
+        /// Direct clock readback. stats() can't carry `time` to JS until the
+        /// serde-wasm-bindgen object-serialization bug is fixed (it returns
+        /// empty objects), so scalar getters are the honest path.
+        #[wasm_bindgen]
+        pub fn time(&self) -> f64 {
+            self.0.time
+        }
+
         #[wasm_bindgen]
         pub fn stats(&self) -> JsValue {
             serde_wasm_bindgen::to_value(&self.0.stats()).unwrap()
