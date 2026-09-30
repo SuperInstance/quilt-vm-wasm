@@ -2,6 +2,7 @@
 name = "quilt-vm-wasm"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
 description = "Layer 1 of the polyformalism — the 5 opcodes (BIND/LINK/EFFECT/VIEW/TICK) as a WASM library. The substrate compiled to the web."
 
 [lib]
