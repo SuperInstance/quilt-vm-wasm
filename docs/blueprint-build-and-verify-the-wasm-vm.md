@@ -58,7 +58,7 @@ console.log(WebAssembly.Module.exports(m).map(e=>e.name).filter(n=>/^wasmquiltvm
 
 This run's output lists (hash suffix elided here): `__wbg_wasmquiltvm_free`, `wasmquiltvm_bind`, `_effect`, `_link`, `_new`, `_reachable`, `_stats`, `_tick`, `_time`, `_view`. Nine methods plus `free` — matching the impl block. The same build **without** `--features wasm` exported only `memory`, `__data_end`, `__heap_base`.
 
-**Step 4 — exercise logic natively** (optional): a scratch crate with `quilt-vm-wasm = { path = "…" }` can call `QuiltVM` directly; see the output in [understanding-quilt-vm-wasm.md](understanding-quilt-vm-wasm.md) §4.
+**Step 4 — exercise logic natively** (optional): a scratch crate with `quilt-vm-wasm = { path = "…" }` can call `QuiltVM` directly; see §4b of [understanding-quilt-vm-wasm.md](understanding-quilt-vm-wasm.md). For the fuller wasm-bindgen + Node run, see [blueprint-build-and-run-in-wasm.md](blueprint-build-and-run-in-wasm.md) (this blueprint stops at the raw `.wasm`, because `wasm-bindgen` was not installed when it was written).
 
 **Step 5 — browser (not run here)**: per README, `wasm-pack build --target web -- --features wasm`, then get `pkg/*` next to `www/index.html` (it imports `./quilt_vm_wasm.js`), then `python3 -m http.server 8000 --directory www`. I did not run this; wasm-pack was unavailable.
 
